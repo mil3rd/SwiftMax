@@ -60,8 +60,8 @@ function App() {
 
   const calculateTimeToGoal = () => {
     const weightDiff = Math.abs(formData.weight - formData.targetWeight);
-    const daysPerWeek = parseInt(formData.workoutDays.split('-')[0]);
-    const minutesPerDay = parseInt(formData.workoutDuration.split('-')[0]);
+    // const daysPerWeek = parseInt(formData.workoutDays.split('-')[0]);
+    // const minutesPerDay = parseInt(formData.workoutDuration.split('-')[0]);
     
     const weeksToGoal = weightDiff * 2;
     return Math.ceil(weeksToGoal);
@@ -72,7 +72,7 @@ function App() {
     const hasPostSurgery = formData.healthConditions.includes('surgery') || formData.healthConditions.includes('breast');
     
     let cardio = '';
-    let strength = '';
+    // let strength = '';
     let exercises = '';
 
     if (hasHealthIssues || hasPostSurgery) {
